@@ -1,12 +1,9 @@
-from src.settings import Settings
-from src.usersettings import UserSettings
+from src.database import DataBase
+from src.turfje import TurfjeManager
+import time
+from src.reasons import RemovalReason
 
+turfjes = TurfjeManager()
+reason = RemovalReason('hello', 'im a description', 2)
 
-settings = Settings()
-userSettings = UserSettings()
-
-# print(settings.get_person_ID())
-# print(settings.get_turfje_ID())
-# print(settings.settings)
-userSettings.create_reason('hel', 'hello im a reason')
-# userSettings.delete_reason('hel')
+turfjes.remove_turfje_by_person(0, reason)

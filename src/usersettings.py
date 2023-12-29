@@ -1,5 +1,5 @@
 from src.managerBase import ManagerBase
-from src.usersettingsUtility import Reason, RemovalReason
+from src.reasons import Reason, RemovalReason
 from src.exceptions import ReasonError
 
 
@@ -74,7 +74,7 @@ class UserSettings(ManagerBase):
         raise ReasonError(abbreviation, 
             "doesntexist")
 
-    def create_removal_reason(self, abbreviation: str, description: str, turfjeCount: int = 1):
+    def create_removal_reason(self, abbreviation: str, description: str, turfjeCount: int):
         if self.does_removal_reason_exist(abbreviation):
             raise ReasonError(abbreviation, 
                 "exists")
@@ -122,5 +122,8 @@ class UserSettings(ManagerBase):
             'reasons': [],
             'removalReasons': []
         }
+
+        self.reasons = []
+        self.removalReasons = []
 
         self.save_file()
