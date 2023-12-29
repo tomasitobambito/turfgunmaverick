@@ -1,4 +1,4 @@
-from src.managerBase import ManagerBase
+from src.db.managerBase import ManagerBase
 from src.exceptions import PersonDoesNotExistError
 
 class Person():

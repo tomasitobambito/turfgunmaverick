@@ -1,6 +1,6 @@
-from src.managerBase import ManagerBase
+from src.db.managerBase import ManagerBase
 from src.exceptions import TurfjeDoesNotExistError
-from src.reasons import RemovalReason
+from src.db.reasons import RemovalReason
 import time
 import os.path
 

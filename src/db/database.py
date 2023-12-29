@@ -1,10 +1,10 @@
 import os
 import time
-from src.settings import Settings
-from src.usersettings import UserSettings
-from src.turfje import TurfjeManager
-from src.person import PersonManager
-from src.reasons import RemovalReason
+from src.db.settings import Settings
+from src.db.usersettings import UserSettings
+from src.db.turfje import TurfjeManager
+from src.db.person import PersonManager
+from src.db.reasons import RemovalReason
 
 
 class DataBase():

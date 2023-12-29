@@ -1,9 +1,9 @@
-from src.database import DataBase
-from src.turfje import TurfjeManager
+from src.db.database import DataBase
+from src.db.turfje import TurfjeManager
 import time
-from src.reasons import RemovalReason
+from src.db.reasons import RemovalReason
 
 turfjes = TurfjeManager()
 reason = RemovalReason('hello', 'im a description', 2)
 
-turfjes.remove_turfje_by_person(0, reason)
+turfjes.remove_turfjes(0, reason)

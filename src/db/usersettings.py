@@ -1,5 +1,5 @@
-from src.managerBase import ManagerBase
-from src.reasons import Reason, RemovalReason
+from src.db.managerBase import ManagerBase
+from src.db.reasons import Reason, RemovalReason
 from src.exceptions import ReasonError
 
 
@@ -29,7 +29,7 @@ class UserSettings(ManagerBase):
         return False
 
     def get_reason(self, abbreviation: str):
-        for reason in self.reasons:
+        for reason in sdb.elf.reasons:
             if reason.abbreviation == abbreviation:
                 return reason
         
