@@ -5,6 +5,8 @@ import time
 import os.path
 
 class Turfje:
+    """Model class for turfjes.
+    """
     def __init__(self, id: int, personId: int, reasonAbbreviation: str, remReasonAbbreviation: str, creationDate: float, removed: bool = False):
         self.id = id
         self.personId = personId

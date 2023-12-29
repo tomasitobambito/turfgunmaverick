@@ -2,6 +2,8 @@ from src.db.managerBase import ManagerBase
 from src.exceptions import PersonDoesNotExistError
 
 class Person():
+    """Model class for people.
+    """
     def __init__(self, id: int, name: str, position: str):
         self.id = id
         self.name = name
